@@ -1,0 +1,28 @@
+/* Empty. Add your own CSS if you like */
+
+.home-icon {
+	text-align: center;
+	font-size: 75px;
+}
+
+.icon-black-imp {
+	color: #5A5959 !important;
+}
+
+.table-img {
+	max-width: 40px;
+	max-height: 40px;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.no-left-right-padding {
+	padding-left: 0px;
+	padding-right: 0px; 
+	padding-bottom: 0px; 
+}
+
+.vertical-middle {
+	vertical-align: middle;
+}

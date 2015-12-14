@@ -1,0 +1,95 @@
+<ion-view view-title="Home">
+  <ion-content overflow-scroll="true">
+    
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <img src="img/order_tomorrow.jpg">
+        <h2>Orders for tomorrow</h2>
+        <p>{{today}}</p>
+      </div>
+
+      <div class="no-left-right-padding item item-body">
+        <div ng-repeat="order in orders" class="row">
+          <div class="col col-20">
+            <img class="table-img" src="img/order_tomorrow.jpg" alt="">
+          </div>
+          <div class="col col-33"><span>{{order.name}}</span></div>
+          <div class="col "><span>{{order.quantity}} {{order.item_type}}</span></div>
+          <div class="col "><span>Rs. {{order.price}}</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="list card">
+
+      <div class="item item-button-right">
+        <h2>Balance</h2>
+        <a href="#/tab/billing" class="button button-positive">View bill</a>
+      </div>
+
+      <div class="item item-button-right">
+        <h2>Rs. 300</h2>
+        <button class="button button-positive">recharge</button>
+      </div>
+
+    </div>
+
+    <div class="list card">
+
+      <div class="item item-icon-right">
+        <i ng-click="productAdd()" class="button button-icon icon ion-android-add"></i>
+        <h2>Subscriptions</h2>
+      </div>
+
+      <div class="no-left-right-padding item item-body">
+        <div ng-repeat="subscription in subscriptions" class="row">
+          <div class="col col-20">
+            <img class="table-img" src="img/order_tomorrow.jpg" alt="">
+          </div>
+          <div class="col col-33"><span>{{subscription.name}}</span></div>
+          <div class="col "><span>{{subscription.quantity}} {{subscription.item_type}}</span></div>
+          <div class="col "><span>Rs. {{subscription.price}}</span></div>
+          <div class="col col-10"><span>
+            <a ng-click="remove(subscription)" style="float:right; color: red; font-size: 20px;" class="ion-android-cancel"></a>
+          </span></div>
+        </div>
+        <!-- <ul>
+          <li ng-repeat="subscription in subscriptions">{{subscription.name}} ({{subscription.quantity}}) Rs. {{subscription.price}} <a ng-click="remove(subscription)" style="float:right; color: red; font-size: 20px;" class="ion-android-cancel"></a></li>
+        </ul> -->
+      </div>
+
+    </div>
+
+    <div class="list card">
+
+      <div class="item item-icon-right">
+        <i ng-click="productAdd()" class="icon ion-android-add"></i>
+        <h2>Ad hoc items</h2>
+      </div>
+
+      <div class="no-left-right-padding item item-body">
+        <div ng-repeat="adhoc in adhocs" class="row">
+          <div class="col col-20">
+            <img class="table-img" src="img/order_tomorrow.jpg" alt="">
+          </div>
+          <div class="col col-33">
+            <span>{{adhoc.name}}</span>
+          </div>
+          <div class="col "><span>{{adhoc.quantity}} {{adhoc.item_type}}</span></div>
+          <div class="col "><span>Rs. {{adhoc.price}}</span></div>
+          <div class="col col-10"><span>
+            <a ng-click="remove(adhoc)" style="float:right; color: red; font-size: 20px;" class="ion-android-cancel"></a>
+          </span></div>
+        </div>
+        <!-- <ul>
+          <li ng-repeat="adhoc in adhocs">{{adhoc.name}} ({{adhoc.quantity}}) Rs. {{adhoc.price}} <a ng-click="remove(adhoc)" style="float:right; color: red; font-size: 20px;" class="ion-android-cancel"></a></a></li>
+        </ul> -->
+        </ul>
+      </div>
+
+    </div>
+    
+  </ion-content>
+</ion-view>

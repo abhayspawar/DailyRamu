@@ -1,0 +1,15 @@
+<ion-view view-title="{{category.name}}">
+  <ion-content overflow-scroll="true">
+    
+    <div class="list">
+
+      <a ng-repeat="item in category.items" class="item item-avatar" href="#/tab/items/{{category.id}}/{{item.id}}">
+        <img src="img/order_tomorrow.jpg">
+        <h2>{{item.name}}</h2>
+        <p>Rs. {{item.price}} / {{item.type}}</p>
+      </a>
+
+    </div>
+
+  </ion-content>
+</ion-view>

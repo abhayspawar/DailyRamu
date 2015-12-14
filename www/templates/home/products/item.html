@@ -1,0 +1,51 @@
+<ion-view view-title="{{item.name}}">
+  <ion-content overflow-scroll="true">
+
+  	<div class="list">
+
+	    <a class="item item-avatar">
+	      <img src="img/order_tomorrow.jpg">
+	      <h2>{{item.name}}</h2>
+	      <p>Rs. {{item.price}} / {{item.type}}</p>
+	    </a>
+
+		</div>
+		
+		<div class="row">
+			<div class="col">
+				<!-- <button ng-click="fromOpen()" class="button button-block button-default">From</button> -->
+				<label>FROM</label>
+				<input ng-model="from" id="fromDate" type="date">
+			</div>
+			<div class="col">
+				<!-- <button ng-click="toDate()" class="button button-block button-default">To</button> -->
+				<label>TO</label>
+				<input ng-model="to" id="toDate" type="date">
+			</div>
+		</div>
+
+		<br>
+		
+		<ion-checkbox ng-click="setType('everyday')" ng-model="obj.everyday">Everyday</ion-checkbox>
+		<ion-checkbox ng-click="setType('alternate_days')" ng-model="obj.alternate_days">Alternate days</ion-checkbox>
+		<ion-checkbox ng-click="setType('just_tomorrow')" ng-model="obj.just_tomorrow">Just tomorrow</ion-checkbox>
+
+		<br><br>
+
+		<div class="button-bar bar-light">
+		  <a ng-click="decrement()" class="button">
+		  	<i class="vertical-middle ion-minus"></i>
+		  </a>
+		  <a class="button">{{quantity}}</a>
+		  <a ng-click="increment()" class="button">
+		  	<i class="vertical-middle ion-android-add"></i>
+		  </a>
+		</div>
+
+		<div class="padding">
+			<button ng-click="placeOrder()" class="button button-block button-positive">
+			  Place order
+			</button>
+    </div>
+  </ion-content>
+</ion-view>

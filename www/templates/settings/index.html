@@ -1,0 +1,35 @@
+<ion-view view-title="Settings">
+  <ion-content>
+
+  	<div class="list card">
+			<a href="#" class="item item-icon-left">
+				<i class="icon ion-person"></i>
+				Abhay Pawar
+			</a>
+			<a href="#" class="item item-icon-left">
+				<i class="icon ion-email"></i>
+				abhay@dailyramu.com
+			</a>
+			<a href="#" class="item item-icon-left">
+        <i class="icon ion-ios-telephone"></i>
+        xx-xx-xx-x
+      </a>
+		</div>
+
+    <ion-list>
+	    <ion-toggle  ng-model="settings.sms">
+	        Send SMS notifications
+	    </ion-toggle>
+	    <ion-toggle  ng-model="settings.email">
+	        Send EMAIL notifications
+	    </ion-toggle>
+    </ion-list>
+
+    <div class="padding">
+		<button class="button button-block button-assertive">
+		  	Log out
+		</button>
+    </div>
+
+  </ion-content>
+</ion-view>
